@@ -27,7 +27,7 @@ jobs:
           gradle-version: '8.7'
           cache-disabled: true
 
-      -       - name: Build debug APK
+      - name: Build debug APK
         run: gradle assembleDebug --no-daemon --stacktrace 2>&1 | tee build-log.txt ; exit ${PIPESTATUS[0]}
 
       - name: Show error in summary if build failed
